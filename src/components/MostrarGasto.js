@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 
 const MostrarGasto = ({ gasto }) => {
   const gastoContext = useContext(gastosContext);
-  const { eliminarGasto, editarGasto } = gastoContext;
+  const { eliminarGasto, editarGasto, ano } = gastoContext;
 
   const eliminar = (id) => {
 
@@ -57,7 +57,7 @@ const MostrarGasto = ({ gasto }) => {
     })
     
     if (formValues) {
-      editarGasto(id, formValues[0], formValues[1], mes)
+      editarGasto(id, formValues[0], formValues[1], mes, ano)
     }
   };
 
@@ -65,7 +65,7 @@ const MostrarGasto = ({ gasto }) => {
   return (
     <>
       <div className="row">
-        <div className="col-9">
+        <div className="col-12">
           <div className="row">
             <div className="col-12 d-flex">
               <h3>

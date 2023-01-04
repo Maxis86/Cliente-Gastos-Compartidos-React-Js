@@ -34,7 +34,8 @@ header {
   /* margin-bottom: 30px; */
 }
 h1 {
-  font-family:  sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+ 
   font-weight: 100;
   color: #ffffff;
   text-align: center;
@@ -43,7 +44,7 @@ h1 {
 h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  color:#ffffff;
+  color:#5854c6;
   margin-bottom:20px;
   font-size:3rem!important;
   text-align: center;

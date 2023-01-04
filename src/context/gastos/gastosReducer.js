@@ -4,9 +4,11 @@ import {
   OBTENER_GASTO_MAXI,
   OBTENER_GASTO_GIGI,
   AGREGAR_MES,
+  AGREGAR_ANO,
   ELIMINAR_GASTOS_MAXI,
   ELIMINAR_GASTOS_GIGI,
   ELIMINAR_ALERTA,
+  BUSCAR_PRODUCTO,
   // ELIMINAR_TODOS_GASTOS_GIGI,
   // ELIMINAR_TODOS_GASTOS_MAXI,
   AGREGAR_ALERTA
@@ -21,7 +23,6 @@ const gastosReducer = (state, action) => {
           ...state.gastosMaxi,
           action.payload,],
         alerta: { msg: "Gasto Agregado" },
-
       };
     case AGREGAR_GASTO_GIGI:
       return {
@@ -37,6 +38,11 @@ const gastosReducer = (state, action) => {
         ...state,
         mes: action.payload,
       };
+    case AGREGAR_ANO:
+      return {
+        ...state,
+        ano: action.payload,
+      };
     case AGREGAR_ALERTA:
       return {
         ...state,
@@ -51,6 +57,11 @@ const gastosReducer = (state, action) => {
       return {
         ...state,
         gastosGigi: action.payload,
+      };
+    case BUSCAR_PRODUCTO:
+      return {
+        ...state,
+        productosBuscados: action.payload,
       };
     case ELIMINAR_GASTOS_MAXI:
       return {

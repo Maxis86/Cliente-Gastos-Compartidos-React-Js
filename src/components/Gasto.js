@@ -8,7 +8,7 @@ import NombreServicioContext from "../context/nombreServicio/nombreServicioConte
 
 const Gasto = () => {
   const gastoContext = useContext(GastosContext);
-  const { agregarGastoMaxi, agregarGastoGigi, agregarMes, mes } = gastoContext;
+  const { agregarGastoMaxi, agregarGastoGigi, agregarMes, mes, agregarAno, ano } = gastoContext;
 
   const loginContext = useContext(LoginContext);
   const { usuario } = loginContext;
@@ -96,6 +96,7 @@ const Gasto = () => {
       precio,
       opcion,
       mes,
+      ano,
       usuarioCargado: usuario.nombre,
       // id: shortid.generate(),
     };
@@ -187,45 +188,9 @@ const Gasto = () => {
               >
                 Maxi
               </label>
-              {/* <button
-                className="btn btn-primary m-2"
-                type="button"
-                data-bs-toggle="collapse"
-                style={{ fontSize: 10 }}
-                data-bs-target="#collapseExample"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
-                <ion-icon style={{ color: "white" }} name="create"></ion-icon>
-              </button> */}
             </div>
           </div>
-          <div className="button-primary u-full-width mb-0">
-            
-            
-            {/* <form style={{ marginBottom: 0 }}>
-              <div className="collapse" id="collapseExample">
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="nombreUno"
-                    //value={nombreUno}
-                    nombre={nombreUno}
-                    onChange={() => EditarPersonas(nombreUno)}
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="formGroupExampleInput2"
-                    placeholder={personaDos}
-                  />
-                </div>
-              </div>
-            </form> */}
-          </div>
+          <div className="button-primary u-full-width mb-0"></div>
         </div>
 
         {error.estado ? <Error mensaje={error.msj} /> : null}
@@ -234,33 +199,57 @@ const Gasto = () => {
           className="button-primary u-full-width mb-0"
           value="agregar gasto"
         />
-
-        <div
-          className="col-3 align-self-center justify-content-end"
-          style={{ marginTop: 10 }}
-        >
-          <select
-            value={mes}
-            style={{ color: "#155724", marginTop: 10 }}
-            className="selectpicker mb-3"
-            aria-label=".form-select-lg example"
-            onChange={(event) => agregarMes(event.target.value)}
-          >
-            <option value="DEFAULT">Seleccione Otro mes</option>
-            <option value="Enero">Enero</option>
-            <option value="Febrero">Febrero</option>
-            <option value="Marzo">Marzo</option>
-            <option value="Abril">Abril</option>
-            <option value="Mayo">Mayo</option>
-            <option value="Junio">Junio</option>
-            <option value="Julio">Julio</option>
-            <option value="Agosto">Agosto</option>
-            <option value="Septiembre">Septiembre</option>
-            <option value="Octubre">Octubre</option>
-            <option value="Noviembre">Noviembre</option>
-            <option value="Diciembre">Diciembre</option>
-          </select>
-        </div>
+        
+          <div className="row">
+            <div className="col">
+              <div
+                className="col-3 align-self-center justify-content-end"
+                style={{ marginTop: 10 }}
+              >
+                <select
+                  value={mes}
+                  style={{ color: "#155724", marginTop: 10 }}
+                  className="selectpicker mb-3"
+                  aria-label=".form-select-lg example"
+                  onChange={(event) => agregarMes(event.target.value, ano)}
+                >
+                  <option value="DEFAULT">Seleccione Otro mes</option>
+                  <option value="Enero">Enero</option>
+                  <option value="Febrero">Febrero</option>
+                  <option value="Marzo">Marzo</option>
+                  <option value="Abril">Abril</option>
+                  <option value="Mayo">Mayo</option>
+                  <option value="Junio">Junio</option>
+                  <option value="Julio">Julio</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Septiembre">Septiembre</option>
+                  <option value="Octubre">Octubre</option>
+                  <option value="Noviembre">Noviembre</option>
+                  <option value="Diciembre">Diciembre</option>
+                </select>
+              </div>
+            </div>
+            <div className="col">
+              <div
+                className="col-3 align-self-center justify-content-end"
+                style={{ marginTop: 10 }}
+              >
+                <select
+                  value={ano}
+                  style={{ color: "#155724", marginTop: 10 }}
+                  className="selectpicker mb-3"
+                  aria-label=".form-select-lg example"
+                  onChange={(event) => agregarAno(mes, event.target.value)}
+                >
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        
       </form>
     </>
   );
