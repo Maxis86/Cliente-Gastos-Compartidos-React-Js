@@ -116,6 +116,61 @@ h6 {
   background-color: #fff3cd;
   border-color: #ffeeba;
 }
+
+.contenido-gasto {
+  border-left: 5px solid #004085;
+  border-right: 5px solid #db2777;
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.51);
+  background-color: #f3f5f3;
+  padding: 2px;
+  height: 70px;
+  border-radius: 1.2rem;
+}
+
+.descripcion-nombre {
+  font-size: 11px;
+  color: #06113cc2;
+  font-weight: 900;
+  height: 40px;
+}
+
+.descripcion-precio {
+  font-size: 15px;
+  color: #06113cc2;
+  height: 30px;
+}
+
+
+/*** SWIPE LIST OVERRIDES **/
+.swipe-action__leading {
+  background-color: #004085;
+  color: #d4edda;
+  /* margin-bottom: 2rem; */
+  border-radius: 10%;
+  margin: 4px;
+  
+}
+
+.swipe-action__trailing {
+  background-color: #db2777;
+  
+  color:  #d4edda;
+  border-radius: 10%;
+  margin: 4px;
+
+}
+
+.swipeable-list .swipe-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  text-align: 'center';
+}
+
+
 /* .gastos-realizados  {
   margin-bottom: 2rem;
 }
@@ -138,4 +193,68 @@ h6 {
   background-color: #004085;
    padding: 1rem; 
   color:white;
+} */
+
+/* .sombra {
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+  background-color: #c8f7cf;
+  padding: 1rem;
+  border-radius: 1.2rem;
+}
+
+.gasto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+}
+
+.cantidad-gasto {
+  font-size: 2.4rem;
+  color: #06113cc2;
+  font-weight: 900;
+}
+
+.contenido-gasto {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contenido-gasto img {
+  width: 10rem;
+}
+
+.descripcion-gasto p {
+  margin: 0 0 0.3rem 0;
+}
+.descripcion-gasto .categoria {
+  color: var(--gris);
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.descripcion-gasto p {
+  margin-bottom: 1rem;
+}
+.descripcion-gasto .nombre-gasto {
+  color: #404a4d;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.descripcion-gasto .nombre-gasto:hover {
+  cursor: pointer;
+}
+.descripcion-gasto .fecha-gasto {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gris-oscuro);
+}
+.descripcion-gasto .fecha-gasto span {
+  font-weight: 400;
 } */
